@@ -34,7 +34,7 @@ class Store<T extends Model> {
 
   Future<bool> delete(String id) async {
     if (_data[id] == null) return false;
-    _data[id] = null;
+    _data.remove(id);
 
     await _syncData();
     return true;

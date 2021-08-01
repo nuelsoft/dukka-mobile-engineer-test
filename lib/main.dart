@@ -1,6 +1,7 @@
 import 'package:dukka/core/__core.dart';
 import 'package:dukka/ui/screens/employee/listing.dart';
 import 'package:dukka/ui/screens/employee/new.dart';
+import 'package:dukka/ui/screens/employee/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       initialRoute: EmployeeListing.uri,
       routes: {
         EmployeeListing.uri: (context) => EmployeeListing(),
-        CreateNewEmployee.uri: (context) => CreateNewEmployee()
+        CreateNewEmployee.uri: (context) => CreateNewEmployee(),
+        EmployeeView.uri: (context) => EmployeeView(),
       },
     );
   }
