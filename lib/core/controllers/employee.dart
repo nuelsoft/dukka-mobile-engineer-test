@@ -1,5 +1,6 @@
 import 'package:dukka/core/__core.dart';
 import 'package:dukka/core/models/employee.dart';
+import 'package:dukka/core/services/logger.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -30,10 +31,10 @@ class EmployeeController extends GetxController {
 
     if (Core.store.findByEmailOrPhone(e.email!, e.phone!) != null) {
       busy.value = false;
+      Logger.error("Employee with specified data already exists!");
       return false;
     }
 
-    // current.value =
     await (current.value == null
         ? Core.store.create(e)
         : Core.store.update(e.id!, e));
