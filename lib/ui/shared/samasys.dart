@@ -6,6 +6,7 @@ class Samasys extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.topRight,
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
